@@ -63,7 +63,12 @@ data/
 ## How It Works
 
 - The scraper connects to the Telegram API using stored credentials in .env.
-- For each channel: - It fetches up to 200 recent messages. - Checks for media (images) and downloads them to the designated folder. - Saves all messages as a JSON array in a file named {channel_name}.json under the date folder. - Logs are saved in the logs/ directory with timestamps to track scraping sessions and errors.
+- For each channel:
+
+        - It fetches up to 200 recent messages.
+        - Checks for media (images) and downloads them to the designated folder.
+        - Saves all messages as a JSON array in a file named {channel_name}.json under the date folder.
+        - Logs are saved in the logs/ directory with timestamps to track scraping sessions and errors.
 
 ## Running the Scraper
 
