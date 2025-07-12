@@ -4,8 +4,6 @@
 
 This project sets up a reproducible development environment for building a full-stack data pipeline to analyze Ethiopian medical businesses using data from public Telegram channels.
 
----
-
 ## Objective
 
 Ensure a robust, modular, and reproducible base environment that supports:
@@ -15,8 +13,6 @@ Ensure a robust, modular, and reproducible base environment that supports:
 - Secure secret handling
 - PostgreSQL data storage
 - Modular project organization
-
----
 
 ## Folder and File Structure
 
@@ -38,15 +34,11 @@ In Task 1, I implemented the data scraping and collection pipeline to extract ra
 
 ## Objectives
 
-    Scrape messages from specified public Telegram channels using the Telegram API via Telethon.
-
-    Download and save images posted in those channels for later enrichment.
-
-    Store all raw data as JSON files, preserving the original message structure.
-
-    Organize raw data in a partitioned directory structure by date and channel.
-
-    Implement logging to track scraping progress and errors for robustness.
+- Scrape messages from specified public Telegram channels using the Telegram API via Telethon
+- Download and save images posted in those channels for later enrichment.
+- Store all raw data as JSON files, preserving the original message structure.
+- Organize raw data in a partitioned directory structure by date and channel.
+- Implement logging to track scraping progress and errors for robustness.
 
 ## Scraped Channels
 
@@ -70,17 +62,8 @@ data/
 
 ## How It Works
 
-The scraper connects to the Telegram API using stored credentials in .env.
-
-For each channel:
-
-It fetches up to 200 recent messages.
-
-Checks for media (images) and downloads them to the designated folder.
-
-Saves all messages as a JSON array in a file named {channel_name}.json under the date folder.
-
-Logs are saved in the logs/ directory with timestamps to track scraping sessions and errors.
+- The scraper connects to the Telegram API using stored credentials in .env.
+- For each channel: - It fetches up to 200 recent messages. - Checks for media (images) and downloads them to the designated folder. - Saves all messages as a JSON array in a file named {channel_name}.json under the date folder. - Logs are saved in the logs/ directory with timestamps to track scraping sessions and errors.
 
 ## Running the Scraper
 
