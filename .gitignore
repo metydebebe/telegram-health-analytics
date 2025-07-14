@@ -4,3 +4,27 @@ __pycache__/
 venv/
 data/
 data/raw/images/tikvahpharma/
+
+# Environment
+.env
+__pycache__/
+*.pyc
+*.ipynb_checkpoints
+*.db
+
+# Data files
+data/raw/
+data/yolo_results.json
+
+# Model weights and image output
+runs/
+*.pt
+
+# Virtual environments
+.venv/
+env/
+.conda/
+*.egg-info/
+
+# Docker
+pgdata/

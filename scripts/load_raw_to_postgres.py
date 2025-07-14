@@ -29,7 +29,7 @@ if __name__ == "__main__":
     import datetime
 
     today = datetime.datetime.today().strftime("%Y-%m-%d")
-    files = glob.glob(f"data/raw/telegram_messages/{today}/*.json")
+    files = glob.glob(f"../data/raw/telegram_messages/{today}/*.json")
 
     for file in files:
         print(f"Loading {file} into PostgreSQL...")
