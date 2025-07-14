@@ -12,7 +12,7 @@ session_name = "test_session"
 
 with TelegramClient(session_name, api_id, api_hash) as client:
     me = client.get_me()
-    print("✅ Connected successfully!")
-    print(f"👤 Name: {me.first_name} {me.last_name or ''}")
-    print(f"📱 Username: @{me.username}")
-    print(f"🆔 User ID: {me.id}")
+    print("Connected successfully!")
+    print(f"Name: {me.first_name} {me.last_name or ''}")
+    print(f"Username: @{me.username}")
+    print(f"User ID: {me.id}")
