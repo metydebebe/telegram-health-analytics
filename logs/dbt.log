@@ -103,3 +103,119 @@ https://docs.getdbt.com/docs/configure-your-profile
 [0m09:39:36.971536 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000278AE47A3E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000278AF8EB820>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000278AF8EAF50>]}
 [0m09:39:36.972535 [debug] [MainThread]: Flushing usage events
 [0m09:39:38.682559 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m08:54:30.069993 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027F0FFBA4A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027F1127DDE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027F1127CF10>]}
+
+
+============================== 08:54:30.096145 | e680828e-28a7-4b69-a4c0-de701a09fd25 ==============================
+[0m08:54:30.096145 [info ] [MainThread]: Running with dbt=1.10.4
+[0m08:54:30.098159 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\metya\\.dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': 'logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt debug', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m08:54:30.360963 [info ] [MainThread]: dbt version: 1.10.4
+[0m08:54:30.362965 [info ] [MainThread]: python version: 3.10.18
+[0m08:54:30.365967 [info ] [MainThread]: python path: C:\Users\metya\anaconda3\envs\telegram-health-analysis\python.exe
+[0m08:54:30.366969 [info ] [MainThread]: os info: Windows-10-10.0.26100-SP0
+[0m08:54:30.731019 [info ] [MainThread]: Using profiles dir at C:\Users\metya\.dbt
+[0m08:54:30.733025 [info ] [MainThread]: Using profiles.yml file at C:\Users\metya\.dbt\profiles.yml
+[0m08:54:30.735025 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\metya\Desktop\telegram-health-analytics\dbt_project.yml
+[0m08:54:30.744426 [info ] [MainThread]: adapter type: postgres
+[0m08:54:30.746433 [info ] [MainThread]: adapter version: 1.9.0
+[0m08:54:30.748430 [info ] [MainThread]: Configuration:
+[0m08:54:30.751426 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m08:54:30.753436 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m08:54:30.755981 [info ] [MainThread]: Required dependencies:
+[0m08:54:30.757982 [debug] [MainThread]: Executing "git --help"
+[0m08:54:30.922018 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m08:54:30.924019 [debug] [MainThread]: STDERR: "b''"
+[0m08:54:30.926020 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m08:54:30.928022 [info ] [MainThread]: Connection:
+[0m08:54:30.931021 [info ] [MainThread]:   host: localhost
+[0m08:54:30.933023 [info ] [MainThread]:   port: 5432
+[0m08:54:30.936022 [info ] [MainThread]:   user: postgres
+[0m08:54:30.939037 [info ] [MainThread]:   database: telegram_db
+[0m08:54:30.944033 [info ] [MainThread]:   schema: raw
+[0m08:54:30.946037 [info ] [MainThread]:   connect_timeout: 10
+[0m08:54:30.948041 [info ] [MainThread]:   role: None
+[0m08:54:30.950036 [info ] [MainThread]:   search_path: None
+[0m08:54:30.951035 [info ] [MainThread]:   keepalives_idle: 0
+[0m08:54:30.953035 [info ] [MainThread]:   sslmode: None
+[0m08:54:30.954544 [info ] [MainThread]:   sslcert: None
+[0m08:54:30.956179 [info ] [MainThread]:   sslkey: None
+[0m08:54:30.959194 [info ] [MainThread]:   sslrootcert: None
+[0m08:54:30.961206 [info ] [MainThread]:   application_name: dbt
+[0m08:54:30.963200 [info ] [MainThread]:   retries: 1
+[0m08:54:30.966197 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m08:54:32.104563 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m08:54:32.644442 [debug] [MainThread]: Using postgres connection "debug"
+[0m08:54:32.646436 [debug] [MainThread]: On debug: select 1 as id
+[0m08:54:32.647948 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m08:54:32.758908 [debug] [MainThread]: SQL status: SELECT 1 in 0.112 seconds
+[0m08:54:32.762906 [debug] [MainThread]: On debug: Close
+[0m08:54:32.764923 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m08:54:32.766924 [info ] [MainThread]: [31m1 check failed:[0m
+[0m08:54:32.768925 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\Users\metya\Desktop\telegram-health-analytics\dbt_project.yml> not found
+
+[0m08:54:32.773681 [debug] [MainThread]: Command `dbt debug` failed at 08:54:32.773681 after 2.96 seconds
+[0m08:54:32.775677 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m08:54:32.777676 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027F0FFBA4A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027F11427B50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027F11426290>]}
+[0m08:54:32.779193 [debug] [MainThread]: Flushing usage events
+[0m08:54:34.806082 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m08:56:11.133723 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FD35E2A4A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FD370EDDE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FD370ECF10>]}
+
+
+============================== 08:56:11.143721 | 8a215116-5ba6-482a-b17e-f7cae13ec284 ==============================
+[0m08:56:11.143721 [info ] [MainThread]: Running with dbt=1.10.4
+[0m08:56:11.145733 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\metya\\.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt debug', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m08:56:11.200792 [info ] [MainThread]: dbt version: 1.10.4
+[0m08:56:11.203524 [info ] [MainThread]: python version: 3.10.18
+[0m08:56:11.206522 [info ] [MainThread]: python path: C:\Users\metya\anaconda3\envs\telegram-health-analysis\python.exe
+[0m08:56:11.210521 [info ] [MainThread]: os info: Windows-10-10.0.26100-SP0
+[0m08:56:11.420915 [info ] [MainThread]: Using profiles dir at C:\Users\metya\.dbt
+[0m08:56:11.423923 [info ] [MainThread]: Using profiles.yml file at C:\Users\metya\.dbt\profiles.yml
+[0m08:56:11.425913 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\metya\Desktop\telegram-health-analytics\dbt_project.yml
+[0m08:56:11.429919 [info ] [MainThread]: adapter type: postgres
+[0m08:56:11.432918 [info ] [MainThread]: adapter version: 1.9.0
+[0m08:56:11.435913 [info ] [MainThread]: Configuration:
+[0m08:56:11.438916 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m08:56:11.441920 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m08:56:11.443912 [info ] [MainThread]: Required dependencies:
+[0m08:56:11.445917 [debug] [MainThread]: Executing "git --help"
+[0m08:56:11.581332 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m08:56:11.585332 [debug] [MainThread]: STDERR: "b''"
+[0m08:56:11.587332 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m08:56:11.590340 [info ] [MainThread]: Connection:
+[0m08:56:11.593867 [info ] [MainThread]:   host: localhost
+[0m08:56:11.596414 [info ] [MainThread]:   port: 5432
+[0m08:56:11.599411 [info ] [MainThread]:   user: postgres
+[0m08:56:11.602408 [info ] [MainThread]:   database: telegram_db
+[0m08:56:11.605414 [info ] [MainThread]:   schema: raw
+[0m08:56:11.607412 [info ] [MainThread]:   connect_timeout: 10
+[0m08:56:11.609414 [info ] [MainThread]:   role: None
+[0m08:56:11.611411 [info ] [MainThread]:   search_path: None
+[0m08:56:11.613407 [info ] [MainThread]:   keepalives_idle: 0
+[0m08:56:11.615409 [info ] [MainThread]:   sslmode: None
+[0m08:56:11.617410 [info ] [MainThread]:   sslcert: None
+[0m08:56:11.620410 [info ] [MainThread]:   sslkey: None
+[0m08:56:11.622411 [info ] [MainThread]:   sslrootcert: None
+[0m08:56:11.625407 [info ] [MainThread]:   application_name: dbt
+[0m08:56:11.628410 [info ] [MainThread]:   retries: 1
+[0m08:56:11.633415 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m08:56:12.828463 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m08:56:13.105242 [debug] [MainThread]: Using postgres connection "debug"
+[0m08:56:13.107245 [debug] [MainThread]: On debug: select 1 as id
+[0m08:56:13.109243 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m08:56:13.250742 [debug] [MainThread]: SQL status: SELECT 1 in 0.141 seconds
+[0m08:56:13.254745 [debug] [MainThread]: On debug: Close
+[0m08:56:13.257737 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m08:56:13.261742 [info ] [MainThread]: [31m1 check failed:[0m
+[0m08:56:13.264739 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\Users\metya\Desktop\telegram-health-analytics\dbt_project.yml> not found
+
+[0m08:56:13.272744 [debug] [MainThread]: Command `dbt debug` failed at 08:56:13.271737 after 2.51 seconds
+[0m08:56:13.275263 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m08:56:13.279780 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FD35E2A4A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FD37293B50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FD37292290>]}
+[0m08:56:13.283267 [debug] [MainThread]: Flushing usage events
+[0m08:56:14.364628 [debug] [MainThread]: An error was encountered while trying to flush usage events

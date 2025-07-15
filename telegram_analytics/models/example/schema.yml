@@ -19,3 +19,15 @@ models:
         data_tests:
           - unique
           - not_null
+
+models:
+  - name: fct_messages
+    description: "Fact table containing Telegram messages"
+    columns:
+      - name: message_id
+        tests:
+          - unique
+          - not_null
+      - name: sent_at
+        tests:
+          - not_null
