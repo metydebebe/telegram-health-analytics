@@ -326,3 +326,62 @@ Used Pydantic schemas to validate and structure API responses, ensuring consiste
 Make sure your database is running and accessible.
 
 The API queries the final transformed data marts built by dbt.
+
+# Task 5 - Pipeline Orchestration with Dagster
+
+## Overview
+
+This task focuses on orchestrating the entire data pipeline using Dagster, a modern orchestration tool with a powerful local development interface. Dagster ensures that our data flow—scraping, loading, transforming, enriching, and serving—is reproducible, observable, and schedulable.
+
+## Setup Instructions
+
+### 1. Install Dagster and the Web UI
+
+pip install dagster dagster-webserver
+
+### 2. Project Structure
+
+dagster_pipeline/
+├── pipeline.py # Defines the job (DAG)
+├── schedules.py # Optional: scheduled job runs
+└── repository.py # Repository definition for Dagster
+
+## Pipeline Logic
+
+Each component of the pipeline is represented as a Dagster @op, and the full pipeline is composed using a @job.
+
+@job
+def telegram_data_pipeline():
+raw = scrape_telegram_data()
+loaded = load_raw_to_postgres()
+transformed = run_dbt_transformations()
+enriched = run_yolo_enrichment()
+
+## Scheduling
+
+To run this job automatically (e.g., every day), define a schedule:
+
+schedules.py:
+
+from dagster import schedule
+from dagster_pipeline.pipeline import telegram_data_pipeline
+
+@schedule(cron_schedule="0 0 \* \* \*", job=telegram_data_pipeline, execution_timezone="UTC")
+def daily_telegram_pipeline_schedule():
+return {}
+
+## Launching Dagster
+
+From the project root:
+dagster dev
+
+Visit the Dagster UI:
+http://127.0.0.1:3000
+
+## Outcome
+
+All tasks (1–4) are unified into one orchestrated flow.
+
+Each component can be individually tested.
+
+The pipeline is observable and ready for production automation.
