@@ -129,3 +129,81 @@ The data folder is .gitignored to avoid pushing raw data to version control.
 The notebook approach allows manual control to prevent hitting Telegram API limits (FloodWaitError).
 
 Future work includes automation and integration into an orchestrated pipeline with Dagster.
+
+# Task 2: Data Modeling & Transformation with dbt
+
+## Goal
+
+Transform raw Telegram message data stored in JSON format into a clean, analytics-ready star schema using dbt (data build tool).
+
+## Setup
+
+Install dbt and PostgreSQL adapter:
+pip install dbt-core dbt-postgres
+
+Initialize dbt project:
+dbt init telegram_analytics
+Configure your profiles.yml (in ~/.dbt/) to connect to PostgreSQL:
+
+telegram_analytics:
+target: dev
+outputs:
+dev:
+type: postgres
+host: localhost
+user: postgres
+password: **\*\*\***
+port: 5432
+dbname: telegram_db
+schema: raw
+
+## Model Structure
+
+I follow a layered dbt model structure:
+
+models/
+├── staging/
+│ └── stg_telegram_messages.sql
+└── marts/
+└── messages/
+├── dim_channels.sql
+├── dim_dates.sql
+└── fct_messages.sql
+stg_telegram_messages.sql
+
+Casts raw JSON into structured columns and extracts key fields like id, channel_id, message, and media.
+
+dim_channels.sql
+A dimension table capturing distinct Telegram channel IDs and synthetic channel names.
+
+dim_dates.sql
+A time dimension table based on unique message dates for temporal analysis.
+
+fct_messages.sql
+A fact table containing each message with metadata like length, has_image, and foreign keys to dim_channels and dim_dates.
+
+## Tests & Validation
+
+Used built-in dbt tests (not_null, unique) to validate model quality:
+
+fct_messages.message_id: must be not_null and unique
+
+fct_messages.sent_at: must be not_null
+
+Custom data tests can be added in tests/ directory for advanced business rules.
+
+## Run & Document
+
+Run models:
+dbt run
+
+Run tests:
+dbt test
+
+Generate documentation:
+dbt docs generate
+dbt docs serve
+
+## Outcome
+
+By the end of this task, I’ve created a modular, testable, and documented dbt transformation layer converting messy Telegram message data into a trusted star schema for analytics and reporting.
