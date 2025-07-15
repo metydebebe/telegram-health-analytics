@@ -31,3 +31,12 @@ models:
       - name: sent_at
         tests:
           - not_null
+models:
+  - name: fct_image_detections
+    columns:
+      - name: image_path
+        tests: [not_null]
+      - name: class_id
+        tests: [not_null]
+      - name: confidence
+        tests: [not_null]
