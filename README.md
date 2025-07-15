@@ -275,3 +275,54 @@ Make sure the raw images are up-to-date before running detection.
 Tune the YOLO model or confidence thresholds as needed for accuracy.
 
 Integration with the overall pipeline is recommended for automated end-to-end processing.
+
+# Task 4 - Build an Analytical API with FastAPI
+
+## Overview
+
+In this task, we build a RESTful API using FastAPI to serve analytical insights derived from our processed Telegram data. The API provides endpoints that answer key business questions by querying the final dbt data marts.
+
+## Setup
+
+### 1. Install dependencies
+
+pip install fastapi uvicorn psycopg2-binary
+
+### 2. Project structure
+
+telegram_analytics/
+├── main.py # FastAPI application instance and route definitions
+├── database.py # Database connection management
+├── models.py # ORM or Pydantic models (if any)
+├── schemas.py # Pydantic schemas for request/response validation
+└── crud.py # Functions for querying the database
+
+## Features
+
+### Analytical Endpoints
+
+GET /api/reports/top-products?limit=10
+Returns the most frequently mentioned products across Telegram messages.
+
+GET /api/channels/{channel_name}/activity
+Returns posting activity (e.g., message counts over time) for a specific channel.
+
+GET /api/search/messages?query=keyword
+Searches Telegram messages for a given keyword and returns matching results.
+
+Running the API
+Start the API server with:
+
+uvicorn main:app --reload
+Access the interactive API docs at:
+http://127.0.0.1:8000/docs
+
+### Data Validation
+
+Used Pydantic schemas to validate and structure API responses, ensuring consistency and easy maintenance.
+
+## Notes
+
+Make sure your database is running and accessible.
+
+The API queries the final transformed data marts built by dbt.
