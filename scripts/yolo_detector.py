@@ -3,8 +3,8 @@ from pathlib import Path
 import json
 import os
 
-model = YOLO("yolov8n.pt")  # You can use yolov8m.pt or yolov8s.pt if needed
-IMG_DIR = "data/images"
+model = YOLO("yolov8n.pt")
+IMG_DIR = "data/raw/images"
 OUTPUT = "data/yolo_results.json"
 
 results = []

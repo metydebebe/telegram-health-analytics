@@ -207,3 +207,71 @@ dbt docs serve
 ## Outcome
 
 By the end of this task, I’ve created a modular, testable, and documented dbt transformation layer converting messy Telegram message data into a trusted star schema for analytics and reporting.
+
+# Task 3 - Data Enrichment with Object Detection (YOLOv8)
+
+## Overview
+
+This task enhances the Telegram data pipeline by applying computer vision techniques to analyze images associated with Telegram messages. Using a modern, pre-trained YOLOv8 model, the pipeline detects objects within images and integrates the detection results into the data warehouse for enriched analysis.
+
+## Setup & Dependencies
+
+- Install the required package for YOLOv8:
+  pip install ultralytics
+
+Ensure your Python environment includes access to the raw Telegram messages and associated images scraped in Task 1.
+
+## Process
+
+Image Collection
+The script scans the folder where Task 1 stored scraped Telegram images (e.g., data/images/).
+
+## Object Detection
+
+Using the YOLOv8 pre-trained model, the script processes each image and detects objects along with confidence scores.
+
+## Result Formatting
+
+The detection results are stored in a structured JSON file containing:
+
+Image filename
+
+Detected object class ID
+
+Confidence score
+
+Database Integration
+
+Create the raw_yolo_detections table in the raw schema to store raw detection data.
+
+Use dbt models to transform raw detections into the fact table fct_image_detections, linking detections to Telegram messages via foreign keys.
+
+## Key Files & Structure
+
+scripts/yolo_detector.py
+Script performing object detection using YOLOv8.
+
+models/staging/stg_yolo_detections.sql
+Staging model to clean and standardize YOLO detection data.
+
+models/marts/messages/fct_image_detections.sql
+Fact table model that integrates image detections with message data for analysis.
+
+## How to Run
+
+Execute the detection script manually or schedule it as part of your pipeline:
+
+python scripts/yolo_detector.py
+Load the raw detection JSON output into the PostgreSQL table raw_yolo_detections.
+
+Run dbt models to process and materialize enriched detection data:
+
+dbt run --select stg_yolo_detections fct_image_detections
+
+## Notes
+
+Make sure the raw images are up-to-date before running detection.
+
+Tune the YOLO model or confidence thresholds as needed for accuracy.
+
+Integration with the overall pipeline is recommended for automated end-to-end processing.

@@ -234,3 +234,18 @@ Runtime Error
 [0m10:28:04.430533 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001837D4CA440>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001837E791090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001837E791840>]}
 [0m10:28:04.431541 [debug] [MainThread]: Flushing usage events
 [0m10:28:07.272240 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:03:40.340261 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022AADA5A470>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022AAEBBC5B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022AADDABEE0>]}
+
+
+============================== 11:03:40.349322 | 36917a31-0e31-48d1-b1c0-0eaea8961795 ==============================
+[0m11:03:40.349322 [info ] [MainThread]: Running with dbt=1.10.4
+[0m11:03:40.352323 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\metya\\.dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': 'logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'invocation_command': 'dbt run --select stg_yolo_detections fct_image_detections', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m11:03:40.355319 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\metya\Desktop\telegram-health-analytics\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m11:03:40.359324 [debug] [MainThread]: Command `dbt run` failed at 11:03:40.358319 after 0.23 seconds
+[0m11:03:40.361322 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022AADA5A470>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022AADDA83A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022AAED690C0>]}
+[0m11:03:40.363317 [debug] [MainThread]: Flushing usage events
+[0m11:03:45.652644 [debug] [MainThread]: An error was encountered while trying to flush usage events

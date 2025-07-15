@@ -1,6 +1,9 @@
+import sys
+import os
+sys.path.append(os.path.join(os.path.dirname(__file__), "..", "telegram_analytics"))
 import psycopg2
 import json
-from config import DATABASE_URL
+# from config import DATABASE_URL
 
 def load_yolo_results():
     conn = psycopg2.connect(DATABASE_URL)

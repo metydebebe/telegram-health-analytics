@@ -1,9 +1,6 @@
 .env
 __pycache__/
 *.pyc
-venv/
-data/
-data/raw/images/tikvahpharma/
 
 # Environment
 .env
@@ -11,10 +8,13 @@ __pycache__/
 *.pyc
 *.ipynb_checkpoints
 *.db
+venv/
 
 # Data files
+data/
 data/raw/
 data/yolo_results.json
+data/raw/images/tikvahpharma/
 
 # Model weights and image output
 runs/
@@ -28,3 +28,7 @@ env/
 
 # Docker
 pgdata/
+
+# DBT logs and general runtime logs
+logs/
+logs/dbt.log
